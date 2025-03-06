@@ -1,0 +1,6 @@
+general.import = [
+  "~/.config/alacritty/catppuccin-macchiato.toml"
+]
+
+[window]
+padding = { x = 10, y = 10 }

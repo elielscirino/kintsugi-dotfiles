@@ -1,0 +1,90 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#window,
+#clock,
+#workspaces button,
+#battery,
+#memory,
+#cpu,
+#network,
+#pulseaudio,
+#custom-media,
+#language {
+	background-color: #24273a;
+	border: 2px solid #59595A;
+	opacity: 0.8;
+}
+
+#submap {
+	background-color: #24273a;
+	border: 2px solid #c6a0f6;
+	opacity: 0.8;
+}
+
+#window:hover,
+#clock:hover,
+#workspaces button:hover,
+#battery:hover,
+#memory:hover,
+#cpu:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-media:hover,
+#language:hover {
+	border: 2px solid #c6a0f6;
+}
+
+#window,
+#clock,
+#memory,
+#cpu,
+#network,
+#pulseaudio,
+#custom-media,
+#language,
+#submap {
+	padding: 0 10px;
+	border-radius: 5px;
+}
+ 
+#workspaces {
+	border-radius: 5px;
+}
+
+#battery {
+	padding: 0 15px 0 10px;
+	border-radius: 5px;
+}
+
+#workspaces button {
+	margin: 0 2px;
+}
+
+#workspaces button.active {
+	border: 2px solid #c6a0f6;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
