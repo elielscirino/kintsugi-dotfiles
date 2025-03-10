@@ -21,12 +21,8 @@ require("config.options")
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    "github/copilot.vim",
     { import = "plugins" }
   },
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
-
--- Theme (Catppuccin)
-vim.cmd.colorscheme "catppuccin-macchiato"

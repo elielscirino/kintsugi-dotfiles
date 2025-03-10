@@ -4,7 +4,7 @@ end
 
 local function mason_lspconfig_config()
   require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "ts_ls", "eslint" }
+    ensure_installed = { "lua_ls", "ts_ls", "eslint", 'tailwindcss' }
   })
 end
 
@@ -17,6 +17,9 @@ local function lspconfig_config()
     capabilities = capabilities,
   })
   lspconfig.ts_ls.setup({
+    capabilities = capabilities,
+  })
+  lspconfig.tailwindcss.setup({
     capabilities = capabilities,
   })
 
@@ -52,6 +55,8 @@ end
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "[g]o to [d]efinition"})
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, { desc = "[g]o to [r]eferences"})
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
+  vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
+  vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
 
   vim.api.nvim_set_keymap('n', '<leader>d', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
   vim.api.nvim_create_user_command("ToggleEslint", toggle_eslint, {})
