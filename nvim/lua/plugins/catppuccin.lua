@@ -1,5 +1,5 @@
 local function catppuccin_config()
-  vim.cmd.colorscheme("catppuccin")
+  vim.cmd.colorscheme("catppuccin-macchiato")
 end
 
 return {

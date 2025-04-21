@@ -12,7 +12,8 @@ vim.opt.number = true
 vim.opt.backup = false
 vim.opt.list = true
 vim.opt.listchars = { space = '·' }
-vim.opt.foldcolumn = '1'
+
+vim.opt.foldcolumn = '0'
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 vim.opt.foldenable = true

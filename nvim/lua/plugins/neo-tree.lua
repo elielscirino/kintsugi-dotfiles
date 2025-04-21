@@ -1,6 +1,11 @@
 local function neotree_config()
+  require("neo-tree").setup({
+    window = {
+      width = 50, -- Change this value to adjust the size
+    }
+  })
   vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>', {})
-  vim.keymap.set('n', '<S-n>', ':Neotree filesystem reveal float<CR>', {})
+  -- vim.keymap.set('n', '<S-n>', ':Neotree filesystem reveal float<CR>', {})
 end
 
 return {
@@ -12,5 +17,5 @@ return {
     "MunifTanjim/nui.nvim",
     -- {"3rd/image.nvim", opts = {}}, -- Optional image support in preview window: See `# Preview Mode` for more information
   },
-  config = neotree_config
+  config = neotree_config,
 }

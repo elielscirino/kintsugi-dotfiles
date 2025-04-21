@@ -4,7 +4,7 @@
     "margin": "10 10 0 10",
     "spacing": 5,
     "modules-left": ["hyprland/workspaces","hyprland/window","hyprland/submap"],
-    "modules-center": [],
+    "modules-center": ["custom/currentWorkspace"],
     "modules-right": [
         "custom/media",
         "network",
@@ -88,4 +88,8 @@
         "smooth-scrolling-threshold": 1,
         "exec": "python $HOME/.config/waybar/mediaplayer.py --player spotify" // Script in resources folder
     },
+    // "custom/currentWorkspace": {
+    //   "format": "{}",
+    //   "exec": "python $HOME/.config/waybar/workspace_watcher.py",
+    // }
 }
